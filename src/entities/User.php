@@ -53,6 +53,7 @@ class User
     {
         $this->id = $id;
     }
+    
 
     public function getNom()
     {

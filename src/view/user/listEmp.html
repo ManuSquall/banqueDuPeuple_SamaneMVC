@@ -7,7 +7,7 @@
 <!-- header -->
 <!-- ============================================================== -->
 
-{include file = '{$url_base}src/view/header.html'}
+    {include file = 'src/view/header.html'}
 
 <!-- ============================================================== -->
 <!-- end header -->
@@ -22,7 +22,7 @@
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                            
-                                <a href="{$url_base}User/accueil" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> </a>
+                                <a href="{$url_base}User/accueil?id={$user->getId()}" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> </a>
                            
                             <div class="page-header">
                                
@@ -48,7 +48,7 @@
 <!-- recent orders  -->
 <!-- ============================================================== -->
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-<a href="{$url_base}User/form_user" class="btn btn-primary"><i class="fas fa-user-plus"></i> Ajouter un utilisateur</a>
+<a href="{$url_base}User/form_user?id={$user->getId()}" class="btn btn-primary"><i class="fas fa-user-plus"></i> Ajouter un employé</a>
     <div class="card">
        
         <div class="card-body p-0">
@@ -76,7 +76,7 @@
                             <td>
                                 <a href="#"
                                     class="btn btn-sm btn-info text-white ml-2"><i
-                                    class="fa fa-info"></i></a>
+                                    class="fa fa-info"></i>nformation</a>
                                 
                             </td>
                         </tr>
@@ -96,7 +96,7 @@
 <!-- ============================================================== -->
 <!-- footer -->
 <!-- ============================================================== -->
-{include file = '{$url_base}src/view/footer.html'}
+{include file = 'src/view/footer.html'}
 <!-- ============================================================== -->
 <!-- end footer -->
 <!-- ============================================================== -->

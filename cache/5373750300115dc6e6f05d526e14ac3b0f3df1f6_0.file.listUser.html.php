@@ -1,28 +1,28 @@
 <?php
-/* Smarty version 3.1.30, created on 2020-03-04 19:12:05
+/* Smarty version 3.1.30, created on 2020-03-16 04:55:55
   from "/opt/lampp/htdocs/projects/banqueDuPeuple_samane/src/view/user/listUser.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5e5fef75a4d893_65799576',
+  'unifunc' => 'content_5e6ef8cb599a81_36582397',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5373750300115dc6e6f05d526e14ac3b0f3df1f6' => 
     array (
       0 => '/opt/lampp/htdocs/projects/banqueDuPeuple_samane/src/view/user/listUser.html',
-      1 => 1583345169,
+      1 => 1584326223,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:{$url_base}src/view/header.html' => 1,
-    'file:{$url_base}src/view/footer.html' => 1,
+    'file:src/view/header.html' => 1,
+    'file:src/view/footer.html' => 1,
   ),
 ),false)) {
-function content_5e5fef75a4d893_65799576 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e6ef8cb599a81_36582397 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 
@@ -33,7 +33,7 @@ function content_5e5fef75a4d893_65799576 (Smarty_Internal_Template $_smarty_tpl)
 <!-- header -->
 <!-- ============================================================== -->
 
-<?php $_smarty_tpl->_subTemplateRender("file:{$url_base}src/view/header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
+    <?php $_smarty_tpl->_subTemplateRender("file:src/view/header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 
@@ -51,12 +51,13 @@ function content_5e5fef75a4d893_65799576 (Smarty_Internal_Template $_smarty_tpl)
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                            
                                 <a href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
-User/accueil" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> </a>
+User/accueil?id=<?php echo $_smarty_tpl->tpl_vars['user']->value->getId();?>
+" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> </a>
                            
                             <div class="page-header">
                                
                                    
-                                <h2 class="pageheader-title " align="center">Liste des employes</h2>
+                                <h2 class="pageheader-title " align="center">Liste des utilisateurs</h2>
                                 
 
                             
@@ -77,8 +78,9 @@ User/accueil" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> </a>
 <!-- recent orders  -->
 <!-- ============================================================== -->
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-<a href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
-User/form_user" class="btn btn-primary"><i class="fas fa-user-plus"></i> Ajouter un utilisateur</a>
+<!-- <a href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+User/form_user?id=<?php echo $_smarty_tpl->tpl_vars['user']->value->getId();?>
+" class="btn btn-primary"><i class="fas fa-user-plus"></i> Ajouter un utilisateur</a> -->
     <div class="card">
        
         <div class="card-body p-0">
@@ -142,7 +144,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 <!-- ============================================================== -->
 <!-- footer -->
 <!-- ============================================================== -->
-<?php $_smarty_tpl->_subTemplateRender("file:{$url_base}src/view/footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
+<?php $_smarty_tpl->_subTemplateRender("file:src/view/footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 <!-- ============================================================== -->

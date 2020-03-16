@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2020-03-04 21:37:56
+/* Smarty version 3.1.30, created on 2020-03-16 05:15:38
   from "/opt/lampp/htdocs/projects/banqueDuPeuple_samane/src/view/header.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5e6011a4e799b2_94068361',
+  'unifunc' => 'content_5e6efd6a5a2fe5_78129851',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2b957d46384396fe9912e5198aacd7496326657f' => 
     array (
       0 => '/opt/lampp/htdocs/projects/banqueDuPeuple_samane/src/view/header.html',
-      1 => 1583345825,
+      1 => 1584332134,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e6011a4e799b2_94068361 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e6efd6a5a2fe5_78129851 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 
@@ -53,7 +53,8 @@ src/public/template/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
 src/public/template/vendor/fonts/flag-icon-css/flag-icon.min.css">
     <!-- squall -->
-    <link rel="stylesheet" href="../src/public/css/squall.css">
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+src/public/css/squall.css">
     <title>Banque du peuple</title>
 </head>
 
@@ -72,7 +73,9 @@ src/public/template/vendor/fonts/flag-icon-css/flag-icon.min.css">
         <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="../Admin/connect">Banque du peuple</a>
+                <a class="navbar-brand" href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+User/accueil?id=<?php echo $_smarty_tpl->tpl_vars['user']->value->getId();?>
+">Banque du peuple</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -102,7 +105,9 @@ src/public/template/vendor/fonts/flag-icon-css/flag-icon.min.css">
 
                             <ul class="nav flex-column">
                                 <li class="nav-item">
-                                    Bienvenue 
+                                    Bienvenue <?php echo $_smarty_tpl->tpl_vars['user']->value->getPrenom();?>
+ <?php echo $_smarty_tpl->tpl_vars['user']->value->getNom();?>
+ 
                                 </li>
 
                             </ul>
@@ -119,65 +124,36 @@ src/public/template/vendor/fonts/flag-icon-css/flag-icon.min.css">
                             <li class="nav-item ">
                                 <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false"
                                     data-target="#submenu-1" aria-controls="submenu-1"><i
+                                        class="fa fa-university"></i>Agences : <span
+                                        class="badge badge-success">6</span></a>
+
+                            </li>
+
+
+                            <!-- ################# -->
+                            <li class="nav-divider">
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false"
+                                    data-target="#submenu-2" aria-controls="submenu-1"><i
                                         class="fa fa-fw fa-user-circle"></i>Utilisateurs : <span
                                         class="badge badge-success">6</span></a>
-                                <div id="submenu-1" class="collapse submenu" >
-                                    <ul class="nav flex-column">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
-User/form_user">Ajouter</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="list_user">Modifier / Supprimer</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
-User/list_client">Lister clients</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
-User/list_emp">Lister employes</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                               
                             </li>
-
-                            <!-- #################
-                            <li class="nav-divider">
-                            </li>
-
-                            <li class="nav-item ">
-                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false"
-                                    data-target="#submenu-1" aria-controls="submenu-1"><i
-                                        class="fa fa-fw fa-user-circle"></i>Clients : <span
-                                        class="badge badge-success">6</span></a>
-                                <div id="submenu-1" class="collapse submenu" >
-                                    <ul class="nav flex-column">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="../Client/add_client">Ajouter</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="../Client/list_client">Modifier</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="../Client/list_client">Supprimer</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li> -->
-
 
                             <!-- ################# -->
                             <li class="nav-divider">
                             </li>
+
+                            
                             <!-- ################# -->
 
                             <li class="nav-item ">
                                 <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false"
-                                    data-target="#submenu-2" aria-controls="submenu-2"><i
+                                    data-target="#submenu-3" aria-controls="submenu-"><i
                                         class="fab fa-fw fa-wpforms"></i>Comptes : <span
                                         class="badge badge-success">6</span></a>
-                                <div id="submenu-2" class="collapse submenu" >
+                                <div id="submenu-3" class="collapse submenu" >
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
                                             <a class="nav-link" href="../Compte/add_compte">Ajouter</a>
@@ -202,7 +178,8 @@ User/list_emp">Lister employes</a>
 
                             </li>
                             <li class="nav-divider">
-                                <a href="../Admin/disconnect"> Déconnecter</a>
+                                <a href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+User/deconnect"> Déconnecter</a>
 
                             </li>
 

@@ -1,34 +1,34 @@
 <?php
-/* Smarty version 3.1.30, created on 2020-03-04 18:56:25
+/* Smarty version 3.1.30, created on 2020-03-16 05:01:58
   from "/opt/lampp/htdocs/projects/banqueDuPeuple_samane/src/view/user/addUser.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5e5febc9601e80_39715059',
+  'unifunc' => 'content_5e6efa36bcdf96_78618625',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9aa2359d589437d0f1f6f12d4c817bf8e2244179' => 
     array (
       0 => '/opt/lampp/htdocs/projects/banqueDuPeuple_samane/src/view/user/addUser.html',
-      1 => 1583344570,
+      1 => 1584331308,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:{$url_base}src/view/header.html' => 1,
-    'file:{$url_base}src/view/footer.html' => 1,
+    'file:src/view/header.html' => 1,
+    'file:src/view/footer.html' => 1,
   ),
 ),false)) {
-function content_5e5febc9601e80_39715059 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e6efa36bcdf96_78618625 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- ============================================================== -->
 <!-- header -->
 <!-- ============================================================== -->
 
-<?php $_smarty_tpl->_subTemplateRender("file:{$url_base}src/view/header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
+    <?php $_smarty_tpl->_subTemplateRender("file:src/view/header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 
@@ -38,7 +38,9 @@ function content_5e5febc9601e80_39715059 (Smarty_Internal_Template $_smarty_tpl)
 <div class="row">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 
-        <a href="accueil" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> </a>
+        <a href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+User/accueil?id=<?php echo $_smarty_tpl->tpl_vars['user']->value->getId();?>
+" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> </a>
 
         <div class="page-header">
 
@@ -69,7 +71,8 @@ function content_5e5febc9601e80_39715059 (Smarty_Internal_Template $_smarty_tpl)
 <div class="splash-container">
     <div class="card ">
         <div class="card-body">
-            <form action="create_client" method="post" class="needs-validation">
+            <form action="create_user?id=<?php echo $_smarty_tpl->tpl_vars['user']->value->getId();?>
+" method="post" class="needs-validation">
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
                         <label for="validationCustomUsername">Numéro</label>
@@ -82,11 +85,43 @@ function content_5e5febc9601e80_39715059 (Smarty_Internal_Template $_smarty_tpl)
                         </div>
                     </div>
 
+
+                   
+
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+                        <div class="form-group">
+                            <label for="input-select">Agence</label>
+                            <select name="id_profil" class="form-control" id="input-select" required>
+                                <option value="">-Selectionner une agence-</option>
+                                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['listeAgence']->value, 'agence');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['agence']->value) {
+?>
+
+                                <option value="<?php echo $_smarty_tpl->tpl_vars['agence']->value->getId();?>
+"> <?php echo $_smarty_tpl->tpl_vars['agence']->value->getRegion();?>
+, <?php echo $_smarty_tpl->tpl_vars['agence']->value->getVille();?>
+
+                                </option>
+                                <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
+
+                            </select>
+                        </div>
+
+                    </div>
+
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 
                         <div class="form-group">
                             <label for="input-select">Profil</label>
-                            <select name="id_client" class="form-control" id="input-select" required>
+                            <select name="id_profil" class="form-control" id="input-select" required>
                                 <option value="">-Selectionner un profil-</option>
                                 <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['listeProfil']->value, 'profil');
@@ -184,7 +219,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 <!-- ============================================================== -->
 <!-- footer -->
 <!-- ============================================================== -->
-<?php $_smarty_tpl->_subTemplateRender("file:{$url_base}src/view/footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
+<?php $_smarty_tpl->_subTemplateRender("file:src/view/footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 

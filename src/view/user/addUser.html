@@ -2,7 +2,7 @@
 <!-- header -->
 <!-- ============================================================== -->
 
-{include file = '{$url_base}src/view/header.html'}
+    {include file = 'src/view/header.html'}
 
 
 <!-- pageheader  -->
@@ -10,7 +10,7 @@
 <div class="row">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 
-        <a href="accueil" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> </a>
+        <a href="{$url_base}User/accueil?id={$user->getId()}" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> </a>
 
         <div class="page-header">
 
@@ -41,7 +41,7 @@
 <div class="splash-container">
     <div class="card ">
         <div class="card-body">
-            <form action="create_client" method="post" class="needs-validation">
+            <form action="create_user?id={$user->getId()}" method="post" class="needs-validation">
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
                         <label for="validationCustomUsername">Numéro</label>
@@ -54,11 +54,31 @@
                         </div>
                     </div>
 
+
+                   
+
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+                        <div class="form-group">
+                            <label for="input-select">Agence</label>
+                            <select name="id_profil" class="form-control" id="input-select" required>
+                                <option value="">-Selectionner une agence-</option>
+                                {foreach from = $listeAgence item= agence}
+
+                                <option value="{$agence->getId()}"> {$agence->getRegion()}, {$agence->getVille()}
+                                </option>
+                                {/foreach}
+
+                            </select>
+                        </div>
+
+                    </div>
+
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 
                         <div class="form-group">
                             <label for="input-select">Profil</label>
-                            <select name="id_client" class="form-control" id="input-select" required>
+                            <select name="id_profil" class="form-control" id="input-select" required>
                                 <option value="">-Selectionner un profil-</option>
                                 {foreach from = $listeProfil item= profil}
 
@@ -145,7 +165,7 @@
 <!-- ============================================================== -->
 <!-- footer -->
 <!-- ============================================================== -->
-{include file = '{$url_base}src/view/footer.html'}
+{include file = 'src/view/footer.html'}
 
 <!-- ============================================================== -->
 <!-- end footer -->

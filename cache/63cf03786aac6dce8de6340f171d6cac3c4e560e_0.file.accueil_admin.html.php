@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2020-03-12 02:01:46
+/* Smarty version 3.1.30, created on 2020-03-16 03:46:32
   from "/opt/lampp/htdocs/projects/banqueDuPeuple_samane/src/view/accueil/accueil_admin.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5e6989fae24fc2_08419875',
+  'unifunc' => 'content_5e6ee888d872e5_90937277',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '63cf03786aac6dce8de6340f171d6cac3c4e560e' => 
     array (
       0 => '/opt/lampp/htdocs/projects/banqueDuPeuple_samane/src/view/accueil/accueil_admin.html',
-      1 => 1583974898,
+      1 => 1584326741,
       2 => 'file',
     ),
   ),
@@ -22,14 +22,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:src/view/footer.html' => 1,
   ),
 ),false)) {
-function content_5e6989fae24fc2_08419875 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e6ee888d872e5_90937277 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <!-- ============================================================== -->
 <!-- header -->
 <!-- ============================================================== -->
 
-    <?php $_smarty_tpl->_subTemplateRender("file:src/view/header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+<?php $_smarty_tpl->_subTemplateRender("file:src/view/header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 <!-- ============================================================== -->
@@ -71,7 +71,8 @@ function content_5e6989fae24fc2_08419875 (Smarty_Internal_Template $_smarty_tpl)
                         <div class="card-img-overlay">
 
                             <a href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
-User/list_client" class="btn btn-primary">GESTION DES CLIENTS</a>
+User/list_client?id=<?php echo $_smarty_tpl->tpl_vars['user']->value->getId();?>
+" class="btn btn-primary">GESTION DES CLIENTS</a>
                         </div>
                     </div>
                 </div>
@@ -81,7 +82,9 @@ User/list_client" class="btn btn-primary">GESTION DES CLIENTS</a>
                         <img class="card-img" src="../src/public/img/compte.jpg" alt="Card image">
                         <div class="card-img-overlay">
 
-                            <a href="../Compte/list_compte" class="btn btn-primary">GESTION DES COMPTES</a>
+                            <a href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+Compte/list_compte?id=<?php echo $_smarty_tpl->tpl_vars['user']->value->getId();?>
+" class="btn btn-primary">GESTION DES COMPTES</a>
                         </div>
                     </div>
                 </div>
