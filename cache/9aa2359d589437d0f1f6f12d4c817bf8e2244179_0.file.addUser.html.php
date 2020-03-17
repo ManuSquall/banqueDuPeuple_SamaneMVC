@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2020-03-16 05:01:58
+/* Smarty version 3.1.30, created on 2020-03-17 07:41:48
   from "/opt/lampp/htdocs/projects/banqueDuPeuple_samane/src/view/user/addUser.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5e6efa36bcdf96_78618625',
+  'unifunc' => 'content_5e70712cadc113_75244843',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9aa2359d589437d0f1f6f12d4c817bf8e2244179' => 
     array (
       0 => '/opt/lampp/htdocs/projects/banqueDuPeuple_samane/src/view/user/addUser.html',
-      1 => 1584331308,
+      1 => 1584427295,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:src/view/footer.html' => 1,
   ),
 ),false)) {
-function content_5e6efa36bcdf96_78618625 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e70712cadc113_75244843 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- ============================================================== -->
 <!-- header -->
@@ -92,7 +92,7 @@ User/accueil?id=<?php echo $_smarty_tpl->tpl_vars['user']->value->getId();?>
 
                         <div class="form-group">
                             <label for="input-select">Agence</label>
-                            <select name="id_profil" class="form-control" id="input-select" required>
+                            <select name="id_agence" class="form-control" id="input-select" required>
                                 <option value="">-Selectionner une agence-</option>
                                 <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['listeAgence']->value, 'agence');

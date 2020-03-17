@@ -44,7 +44,7 @@ class UserRepository extends Model
     public function listeUserByIdProfil($id){
 		if($this->db != null)
 		{
-			return $this->db->getRepository('User')->findBy(array('id' => $id));
+			return $this->db->getRepository('User')->findBy(array('profil_id' => $id));
 		}
     }
 

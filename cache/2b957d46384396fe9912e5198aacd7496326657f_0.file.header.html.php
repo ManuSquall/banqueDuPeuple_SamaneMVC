@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2020-03-16 05:15:38
+/* Smarty version 3.1.30, created on 2020-03-17 06:54:11
   from "/opt/lampp/htdocs/projects/banqueDuPeuple_samane/src/view/header.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5e6efd6a5a2fe5_78129851',
+  'unifunc' => 'content_5e7066032ce7e0_22449908',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2b957d46384396fe9912e5198aacd7496326657f' => 
     array (
       0 => '/opt/lampp/htdocs/projects/banqueDuPeuple_samane/src/view/header.html',
-      1 => 1584332134,
+      1 => 1584424447,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e6efd6a5a2fe5_78129851 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e7066032ce7e0_22449908 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 
@@ -135,9 +135,33 @@ User/accueil?id=<?php echo $_smarty_tpl->tpl_vars['user']->value->getId();?>
                             </li>
                             <li class="nav-item ">
                                 <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false"
-                                    data-target="#submenu-2" aria-controls="submenu-1"><i
+                                    data-target="#submenu-2" aria-controls="submenu-2"><i
                                         class="fa fa-fw fa-user-circle"></i>Utilisateurs : <span
                                         class="badge badge-success">6</span></a>
+                                        <div id="submenu-2" class="collapse submenu" >
+                                            <ul class="nav flex-column">
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+User/form_user?id=<?php echo $_smarty_tpl->tpl_vars['user']->value->getId();?>
+">Ajouter</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+User/list_user?id=<?php echo $_smarty_tpl->tpl_vars['user']->value->getId();?>
+">Modifier / Supprimer</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+User/list_client?id=<?php echo $_smarty_tpl->tpl_vars['user']->value->getId();?>
+">Lister clients</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+User/list_emp?id=<?php echo $_smarty_tpl->tpl_vars['user']->value->getId();?>
+">Lister employes</a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                
                             </li>
 
@@ -150,7 +174,7 @@ User/accueil?id=<?php echo $_smarty_tpl->tpl_vars['user']->value->getId();?>
 
                             <li class="nav-item ">
                                 <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false"
-                                    data-target="#submenu-3" aria-controls="submenu-"><i
+                                    data-target="#submenu-3" aria-controls="submenu-3"><i
                                         class="fab fa-fw fa-wpforms"></i>Comptes : <span
                                         class="badge badge-success">6</span></a>
                                 <div id="submenu-3" class="collapse submenu" >

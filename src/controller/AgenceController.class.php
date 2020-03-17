@@ -73,42 +73,28 @@ class UserController extends Controller{
     public function list_client(){
         $userdb = new UserRepository();
         $data['user']= $userdb->getUserById($_GET['id']);
-
-
-        $liste = $userdb->listeUser();
-        $listefinal = array();
-        foreach($liste as $a){
-            // var_dump($a);
-            // var_dump($a->getProfil()->getId());
-            // echo $a->getProfil();
-            // die();
-            if($a->getProfil()->getId()==2){
-                array_push($listefinal, $a);
-            }
-        }
-        $data['listeClient'] = $listefinal;
-        
+        $data['listeClient'] = $userdb->listeUserByIdProfil(2);
         return $this->view->load("user/listClient", $data);
     }
 
-    public function list_user(){
+    public function list_user($id){
         $userdb = new UserRepository();
-        // if($id){
-        //     $data['user']= $userdb->getUserById($id);
-        // }else{
+        if($id){
+            $data['user']= $userdb->getUserById($id);
+        }else{
             $data['user']= $userdb->getUserById($_GET['id']);
-        // }
+        }
         $data['listeUser'] = $userdb->listeUser();
         return $this->view->load("user/listUser", $data);
     }
 
-    public function list_emp(){
+    public function list_emp($id){
         $userdb = new UserRepository();
-        // if($id){
-        //     $data['user']= $userdb->getUserById($id);
-        // }else{
+        if($id){
+            $data['user']= $userdb->getUserById($id);
+        }else{
             $data['user']= $userdb->getUserById($_GET['id']);
-        // }
+        }
         $liste = $userdb->listeUser();
         $listefinal = array();
         foreach($liste as $a){
@@ -151,10 +137,10 @@ class UserController extends Controller{
         $agencedb = new AgenceRepository();
         if(isset($_POST['save']))
         {
-            
             extract($_POST);
             $data['ok'] = 0;
             if(!empty($numero) && !empty($id_agence) && !empty($id_profil) && !empty($nom) && !empty($prenom) && !empty($adresse) && !empty($mail) && !empty($login) && !empty($mdp) && !empty($tel)) {
+                
                 $userObject = new User();
                 
                 $userObject->setNom(addslashes($nom));
@@ -174,8 +160,6 @@ class UserController extends Controller{
 
                 $ok = $userdb->addUser($userObject);
                 $data['ok'] = $ok;
-                echo $ok;
-                die();
             }
             return $this->list_user($_GET['id']);
         }else{
