@@ -174,8 +174,6 @@ class UserController extends Controller{
 
                 $ok = $userdb->addUser($userObject);
                 $data['ok'] = $ok;
-                echo $ok;
-                die();
             }
             return $this->list_user($_GET['id']);
         }else{

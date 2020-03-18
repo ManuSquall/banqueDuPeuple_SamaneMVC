@@ -90,7 +90,7 @@ class UserRepository extends Model
 	{
 		if($this->db != null)
 		{
-			$this->db->persist($user);
+			$this->db->merge($user);
 			$this->db->flush();
 
 			return $user->getId();

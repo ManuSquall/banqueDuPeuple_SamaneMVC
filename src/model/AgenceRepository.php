@@ -27,6 +27,17 @@ class AgenceRepository extends Model
 		}
     }
 
+    public function addAgence($agence)
+	{
+		if($this->db != null)
+		{
+			$this->db->persist($agence);
+			$this->db->flush();
+
+			return $agence->getId();
+		}
+	}
+
     
 
 }

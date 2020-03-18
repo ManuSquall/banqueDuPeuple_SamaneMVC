@@ -5,7 +5,7 @@
 use libs\system\Controller;
 use src\model\UserRepository;
 use src\model\AgenceRepository;
-class UserController extends Controller{
+class AgenceController extends Controller{
 
     public function __construct(){
         parent::__construct();
@@ -70,11 +70,12 @@ class UserController extends Controller{
         
     }  
 
-    public function list_client(){
+    public function list_agence(){
         $userdb = new UserRepository();
+        $agencedb = new AgenceRepository();
         $data['user']= $userdb->getUserById($_GET['id']);
-        $data['listeClient'] = $userdb->listeUserByIdProfil(2);
-        return $this->view->load("user/listClient", $data);
+        $data['listeAgence'] = $agencedb->listeOfAgence();
+        return $this->view->load("agence/listAgence", $data);
     }
 
     public function list_user($id){
@@ -112,13 +113,11 @@ class UserController extends Controller{
         return $this->view->load("user/listEmp", $data);
     }
 
-    public function form_user(){
+    public function form_agence(){
         $userdb = new UserRepository();
         $agencedb = new AgenceRepository();
         $data['user']= $userdb->getUserById($_GET['id']);
-        $data['listeProfil'] = $userdb->listeOfProfil();
-        $data['listeAgence'] = $agencedb->listeOfAgence();
-        return $this->view->load("user/addUser", $data);
+        return $this->view->load("agence/addAgence", $data);
     }
 
      /** 
@@ -131,39 +130,28 @@ class UserController extends Controller{
         return $this->list_user();
     }
 
-    public function create_user(){
+    public function create_agence(){
 
-        $userdb = new UserRepository();
         $agencedb = new AgenceRepository();
         if(isset($_POST['save']))
         {
             extract($_POST);
             $data['ok'] = 0;
-            if(!empty($numero) && !empty($id_agence) && !empty($id_profil) && !empty($nom) && !empty($prenom) && !empty($adresse) && !empty($mail) && !empty($login) && !empty($mdp) && !empty($tel)) {
+            if(!empty($numero) && !empty($ville) && !empty($region)) {
                 
-                $userObject = new User();
+                $agenceObject = new Agence();
                 
-                $userObject->setNom(addslashes($nom));
-                $userObject->setPrenom(addslashes($prenom));
-                $userObject->setEmail(addslashes($mail));
-                $userObject->setPassword(addslashes($mdp));
-                $userObject->setLogin(addslashes($login));
-                $userObject->setAdresse(addslashes($adresse));
-                $userObject->setTel(addslashes($tel));
-                $userObject->setNumero(addslashes($numero));
-                // ##############################
-                $userObject->setAgence($agencedb->getAgenceById(addslashes($id_agence)));
-                $userObject->setProfil($userdb->getProfilById(addslashes($id_profil)));
-                // echo addslashes($id_agence);
-                // echo addslashes($id_profil);
-                // die();
+                $agenceObject->setNumero(addslashes($numero));
+                $agenceObject->setVille(addslashes($ville));
+                $agenceObject->setRegion(addslashes($region));
+                
 
-                $ok = $userdb->addUser($userObject);
+                $ok = $agencedb->addAgence($agenceObject);
                 $data['ok'] = $ok;
             }
-            return $this->list_user($_GET['id']);
+            return $this->list_agence($_GET['id']);
         }else{
-            return $this->list_user($_GET['id']);
+            return $this->list_agence($_GET['id']);
 
         }
         

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2020-03-17 06:54:11
+/* Smarty version 3.1.30, created on 2020-03-18 23:51:43
   from "/opt/lampp/htdocs/projects/banqueDuPeuple_samane/src/view/header.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5e7066032ce7e0_22449908',
+  'unifunc' => 'content_5e72a5ff6302f9_03155615',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2b957d46384396fe9912e5198aacd7496326657f' => 
     array (
       0 => '/opt/lampp/htdocs/projects/banqueDuPeuple_samane/src/view/header.html',
-      1 => 1584424447,
+      1 => 1584571901,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e7066032ce7e0_22449908 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e72a5ff6302f9_03155615 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 
@@ -81,6 +81,89 @@ User/accueil?id=<?php echo $_smarty_tpl->tpl_vars['user']->value->getId();?>
                     aria-label="Toggle navigation">
                 </button>
 
+                <!-- ##########################################################"" -->
+
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto navbar-right-top">
+                        <li class="nav-item">
+                            <div id="custom-search" class="top-search-bar">
+                                <h3>Bienvenue <?php echo $_smarty_tpl->tpl_vars['user']->value->getPrenom();?>
+ <?php echo $_smarty_tpl->tpl_vars['user']->value->getNom();?>
+</h3>
+                                <!-- <input class="form-control" type="text" placeholder="Search.."> -->
+                            </div>
+
+                        </li>
+                        <li class="nav-item dropdown notification">
+                            <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-fw fa-bell"></i> <span class="indicator"></span></a>
+                            <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
+                                <li>
+                                    <div class="notification-title"> Notification</div>
+                                    <div class="notification-list">
+                                        <div class="list-group">
+                                            <a href="#" class="list-group-item list-group-item-action active">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-2.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jeremy Rakestraw</span>accepted your invitation to join the team.
+                                                        <div class="notification-date">2 min ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-3.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">John Abraham </span>is now following you
+                                                        <div class="notification-date">2 days ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-4.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Monaan Pechi</span> is watching your main repository
+                                                        <div class="notification-date">2 min ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-5.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jessica Caruso</span>accepted your invitation to join the team.
+                                                        <div class="notification-date">2 min ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list-footer"> <a href="#">Notifications</a></div>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item dropdown nav-user">
+                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+src/public/template/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
+                            <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
+                                <div class="nav-user-info">
+                                    <h5 class="mb-0 text-white nav-user-name"><?php echo $_smarty_tpl->tpl_vars['user']->value->getPrenom();?>
+ <?php echo $_smarty_tpl->tpl_vars['user']->value->getNom();?>
+ </h5>
+                                    <span class="status"></span><span class="ml-2"><?php echo $_smarty_tpl->tpl_vars['user']->value->getProfil()->getLibelle();?>
+</span>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Profil</a>
+                                <!-- <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a> -->
+                                <a class="dropdown-item" href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+User/deconnect"><i class="fas fa-power-off mr-2"></i>Déconnexion</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+                <!-- ##########################################################"" -->
+
             </nav>
         </div>
         <!-- ============================================================== -->
@@ -99,18 +182,18 @@ User/accueil?id=<?php echo $_smarty_tpl->tpl_vars['user']->value->getId();?>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav flex-column">
-                            <li class="nav-divider" align="center">
+                            <!-- <li class="nav-divider" align="center">
                                 
-                            </li>
+                            </li> -->
 
-                            <ul class="nav flex-column">
+                            <!-- <ul class="nav flex-column">
                                 <li class="nav-item">
                                     Bienvenue <?php echo $_smarty_tpl->tpl_vars['user']->value->getPrenom();?>
  <?php echo $_smarty_tpl->tpl_vars['user']->value->getNom();?>
  
                                 </li>
 
-                            </ul>
+                            </ul> -->
 
 
                             <!-- ############################################## -->
@@ -121,11 +204,17 @@ User/accueil?id=<?php echo $_smarty_tpl->tpl_vars['user']->value->getId();?>
                             <li class="nav-divider">
                                 Services
                             </li>
-                            <li class="nav-item ">
-                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false"
+                            <!-- <li class="nav-item ">
+                                <a class="nav-link active" href="Agence/list_user" data-toggle="collapse" aria-expanded="false"
                                     data-target="#submenu-1" aria-controls="submenu-1"><i
                                         class="fa fa-university"></i>Agences : <span
                                         class="badge badge-success">6</span></a>
+
+                            </li> -->
+                            <li class="nav-divider">
+                                <a href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+Agence/list_agence?id=<?php echo $_smarty_tpl->tpl_vars['user']->value->getId();?>
+"> Agences</a>
 
                             </li>
 
@@ -197,15 +286,7 @@ User/list_emp?id=<?php echo $_smarty_tpl->tpl_vars['user']->value->getId();?>
                             <!-- ############################################## -->
 
 
-                            <li class="nav-divider">
-                                <a href="#"> Info</a>
-
-                            </li>
-                            <li class="nav-divider">
-                                <a href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
-User/deconnect"> Déconnecter</a>
-
-                            </li>
+                            
 
 
 
